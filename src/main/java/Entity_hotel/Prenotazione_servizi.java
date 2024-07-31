@@ -7,6 +7,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
@@ -22,6 +24,14 @@ public class Prenotazione_servizi {
 	
 	@Column(name="n_persone")
 	private Integer n_persone;
+	
+	@ManyToOne
+    @JoinColumn(name = "FK_servizi")
+    private Servizi servizi;
+
+	@ManyToOne
+    @JoinColumn(name = "FK_prenotazione")
+    private Prenotazione prenotazione;
 	
 	public Prenotazione_servizi(Date data_servizio, Integer n_persone) {
 		this.data_servizio=data_servizio;
