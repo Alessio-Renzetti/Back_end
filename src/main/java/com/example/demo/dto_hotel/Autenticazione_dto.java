@@ -1,4 +1,4 @@
-package dto_hotel;
+package com.example.demo.dto_hotel;
 
 import java.util.Date;
 
