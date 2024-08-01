@@ -20,7 +20,16 @@ public class Cliente {
 	    @Column(name="id_cliente")
 	    private Long id_cliente;
 
-	    @Column(name="username_CL")
+	    public Cliente(String username_CL, String nome_cliente, String cognome_cliente,
+				Date data_nascita, String password_CL) {
+			this.username_CL = username_CL;
+			this.nome_cliente = nome_cliente;
+			this.cognome_cliente = cognome_cliente;
+			this.data_nascita = data_nascita;
+			this.password_CL = password_CL;
+		}
+
+		@Column(name="username_CL")
 	    private String username_CL;
 
 	    @Column(name="nome_cliente")
