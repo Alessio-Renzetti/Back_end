@@ -6,6 +6,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
@@ -19,8 +21,9 @@ public class Prenotazione {
 	    @Column(name="	id_prenotazione")
 	    private Long 	id_prenotazione;
 
-	    @Column(name="	FK_cliente ")
-	    private String 	FK_cliente ;
+	    @ManyToOne
+	    @JoinColumn(name="FK_cliente")
+	    private Cliente cliente ;
 
 	    @Column(name="data_inizio")
 	    private String data_inizio;
@@ -44,8 +47,8 @@ public class Prenotazione {
 			return id_prenotazione;
 		}
 
-		public String getFK_cliente() {
-			return FK_cliente;
+		public Cliente getFK_cliente() {
+			return cliente;
 		}
 
 		public String getData_inizio() {
@@ -68,8 +71,8 @@ public class Prenotazione {
 			this.id_prenotazione = id_prenotazione;
 		}
 
-		public void setFK_cliente(String fK_cliente) {
-			FK_cliente = fK_cliente;
+		public void setFK_cliente(Cliente fK_cliente) {
+			cliente = fK_cliente;
 		}
 
 		public void setData_inizio(String data_inizio) {
