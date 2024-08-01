@@ -1,4 +1,4 @@
-package Entity_hotel;
+package com.example.demo.Entity_hotel;
 
 import jakarta.persistence.*;
 
