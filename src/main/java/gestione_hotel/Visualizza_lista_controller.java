@@ -7,24 +7,22 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 
-public class Gestione_hotel_controller {	
+public class Visualizza_lista_controller {	
 	
-	@Autowired private Gestione_hotel_controller  gestione_hotel_controller;
+@Autowired private Visualizza_lista_controller  visualizza_lista_controller;
 	
-		@RequestMapping  (value="/home")
-		public String info() {
+	@RequestMapping  (value="/home")
+	public String info() {
+		
+		
 		
 		return "non so";
 	
 	
-		}
+	}
 	
-
-
-
-
-
-
-
+	
+	
+	
 
 }

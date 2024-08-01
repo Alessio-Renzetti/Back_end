@@ -1,5 +1,8 @@
 package gestione_hotel;
 
+
+
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -7,24 +10,21 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 
-public class Gestione_hotel_controller {	
+
+public class Prenotazioni_controller {
 	
-	@Autowired private Gestione_hotel_controller  gestione_hotel_controller;
+	@Autowired private Prenotazione_controller  Prenotazione_controller;
 	
-		@RequestMapping  (value="/home")
-		public String info() {
+	public visualizza_lista() {
 		
-		return "non so";
-	
-	
-		}
+		
+	}
 	
 
-
-
-
-
-
-
-
+	
+	public modifica_Prenotazione() {}
+	
+	
+	
+	public elimina_Prenotazione() {}
 }
