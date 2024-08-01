@@ -1,17 +1,17 @@
 package com.example.demo.dto_hotel;
 
-import java.util.Date;
+//import java.util.String;
 
 public class Autenticazione_dto {
 	private String username;
 	private String nome;
 	private String cognome;
-	private Date data_di_nascita;
+	private String data_di_nascita;
 	private String password;
 	public String getUsername() {
 		return username;
 	}
-	public Autenticazione_dto(String username, String nome, String cognome, Date data_di_nascita, String password) {
+	public Autenticazione_dto(String username, String nome, String cognome, String data_di_nascita, String password) {
 		this.username = username;
 		this.nome = nome;
 		this.cognome = cognome;
@@ -33,10 +33,10 @@ public class Autenticazione_dto {
 	public void setCognome(String cognome) {
 		this.cognome = cognome;
 	}
-	public Date getData_di_nascita() {
+	public String getData_di_nascita() {
 		return data_di_nascita;
 	}
-	public void setData_di_nascita(Date data_di_nascita) {
+	public void setData_di_nascita(String data_di_nascita) {
 		this.data_di_nascita = data_di_nascita;
 	}
 	public String getPassword() {
