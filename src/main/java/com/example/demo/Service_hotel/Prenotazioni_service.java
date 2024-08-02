@@ -21,7 +21,7 @@ public class Prenotazioni_service {
 	public String visualizza_lista(CredenzialiUtente credenzialiUtente) {
 		Cliente cliente_autenticato = clienterepository.findByUsernameAndPassword(credenzialiUtente.getUsername(), credenzialiUtente.getPassword());
 		
-		List<Prenotazione> prenotazioni_utente = prenotazionirepository.trovaPerCliente(cliente_autenticato); // Metodo di ricerca nel repository
+		List<Prenotazione> prenotazioni_utente = prenotazionirepository.trovaPerCliente(cliente_autenticato.getId_cliente());
 		
 		
 		return null;}

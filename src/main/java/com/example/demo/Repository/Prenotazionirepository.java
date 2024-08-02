@@ -12,6 +12,7 @@ import com.example.demo.Entity_hotel.Prenotazione;
 @Repository
 public interface Prenotazionirepository extends JpaRepository<Prenotazione, Long> {
 
-	@Query("select pr from Prenotazione pr where Cliente = :clienteAutenticato")
-	public List<Prenotazione> trovaPerCliente(Cliente clienteAutenticato);
+	@Query("select pr from Prenotazione pr "
+			+ "where pr.Cliente.id_cliente = :clienteAutenticato")
+	public List<Prenotazione> trovaPerCliente(Long idClienteAutenticato);
 }
