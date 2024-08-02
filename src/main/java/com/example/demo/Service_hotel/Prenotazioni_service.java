@@ -22,11 +22,11 @@ public class Prenotazioni_service {
 	public String visualizza_lista(CredenzialiUtente credenzialiUtente) {
 		Cliente cliente_autenticato = clienterepository.findByUsernameAndPassword(credenzialiUtente.getUsername(), credenzialiUtente.getPassword());
 		
-		//List<Prenotazione> prenotazioni_utente = prenotazionirepository.trovaPerCliente(cliente_autenticato.getId_cliente());
+		List<Prenotazione> prenotazioni_utente = prenotazionirepository.trovaPerCliente(cliente_autenticato.getId_cliente());
 		List<Prenotazione> prenotazioni = prenotazionirepository.trovaTutti();
-		List<Prenotazione> prenotazioni_utente = prenotazioni.stream()
+		/*List<Prenotazione> prenotazioni_utente = prenotazioni.stream()
 															.filter(pre -> pre.getFK_cliente() == cliente_autenticato)
-															.collect(Collectors.toList());
+															.collect(Collectors.toList());*/
 		
 		
 		return null;}
