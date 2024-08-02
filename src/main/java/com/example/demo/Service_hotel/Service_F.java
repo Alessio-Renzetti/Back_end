@@ -20,13 +20,13 @@ public String registrazione(Autenticazione_dto autenticazione_dto) {
 		utente_da_registrare = new Cliente(autenticazione_dto.getUsername(), autenticazione_dto.getNome(),autenticazione_dto.getCognome(),
 				autenticazione_dto.getData_di_nascita(),autenticazione_dto.getPassword() );
 		clienteRepository.save(utente_da_registrare);
+		return "Registrazione avvenuta";
 	}
 	else {
-		
-		//"Username già in uso "
-		
+
+		return "Username già in uso";
+
 	}
-return "";	
 
 }
 }
