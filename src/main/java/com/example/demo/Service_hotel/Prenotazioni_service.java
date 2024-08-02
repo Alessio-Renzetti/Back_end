@@ -23,7 +23,7 @@ public class Prenotazioni_service {
 		Cliente cliente_autenticato = clienterepository.findByUsernameAndPassword(credenzialiUtente.getUsername(), credenzialiUtente.getPassword());
 		
 		//List<Prenotazione> prenotazioni_utente = prenotazionirepository.trovaPerCliente(cliente_autenticato.getId_cliente());
-		List<Prenotazione> prenotazioni = prenotazionirepository.findAll();
+		List<Prenotazione> prenotazioni = prenotazionirepository.trovaTutti();
 		List<Prenotazione> prenotazioni_utente = prenotazioni.stream()
 															.filter(pre -> pre.getFK_cliente() == cliente_autenticato)
 															.collect(Collectors.toList());

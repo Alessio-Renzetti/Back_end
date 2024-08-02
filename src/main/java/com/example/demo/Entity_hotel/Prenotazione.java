@@ -11,15 +11,15 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name="cliente")
+@Table(name="prenotazione")
 public class Prenotazione {
 
  
 	
 	 	@Id
 	    @GeneratedValue(strategy = GenerationType.IDENTITY)
-	    @Column(name="	id_prenotazione")
-	    private Long 	id_prenotazione;
+	    @Column(name="id_prenotazione", nullable = false, unique = true)
+	    private Long id_prenotazione;
 
 	    @ManyToOne
 	    @JoinColumn(name="FK_cliente")
