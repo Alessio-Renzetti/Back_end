@@ -1,5 +1,6 @@
 package com.example.demo.Controller_hotel;
 
+import com.example.demo.dto_hotel.RispostaDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -16,7 +17,10 @@ public class Controller_F {
 	@PostMapping("/registrati")
 	@CrossOrigin(origins = "*")
 	@ResponseBody
-	private String registrazione(@RequestBody Autenticazione_dto autenticazione_dto) {
+	private RispostaDTO registrazione(@RequestBody Autenticazione_dto autenticazione_dto) {
 		
-		return service_F.registrazione(autenticazione_dto);	}
+		RispostaDTO risposta = new RispostaDTO(service_F.registrazione(autenticazione_dto));
+		return risposta;
+
+	}
 }
