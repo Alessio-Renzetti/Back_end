@@ -33,11 +33,8 @@ public class Prenotazione {
 	    
 	    @Column(name="	pagato")
 	    private Integer pagato;
-	    
-	    @Column(name="password_CL")
-	    private Integer password_CL;
 
-	    // Costruttori, getter e setter
+	// Costruttori, getter e setter
 
 	    public Prenotazione() {
 	    	
@@ -63,11 +60,7 @@ public class Prenotazione {
 			return pagato;
 		}
 
-		public Integer getPassword_CL() {
-			return password_CL;
-		}
-
-		public void setId_prenotazione(Long id_prenotazione) {
+	public void setId_prenotazione(Long id_prenotazione) {
 			this.id_prenotazione = id_prenotazione;
 		}
 
@@ -85,10 +78,6 @@ public class Prenotazione {
 
 		public void setPagato(Integer pagato) {
 			this.pagato = pagato;
-		}
-
-		public void setPassword_CL(Integer password_CL) {
-			this.password_CL = password_CL;
 		}
 
 }
