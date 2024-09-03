@@ -1,13 +1,13 @@
 package com.example.demo.Service_hotel;
 
-import com.example.demo.dto_hotel.Autenticazione_dto;
-import com.example.demo.dto_hotel.Registrazione_dto;
-import com.example.demo.dto_hotel.RispostaDTO;
+import com.example.demo.dto_hotel.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.example.demo.Entity_hotel.Cliente;
 import com.example.demo.Repository.ClienteRepository;
+
+import java.util.Date;
 
 @Service
 
@@ -30,9 +30,17 @@ public RispostaDTO registrazione(Registrazione_dto registrazione_dto) {
 	}
 
 }
-public String autenticazione(Autenticazione_dto autenticazione_dto) {
+public Pagina_profilo_DTO autenticazione(Autenticazione_dto autenticazione_dto) {
 	// TODO Auto-generated method stub
 	Cliente cliente = clienteRepository.findByUsernameAndPassword(autenticazione_dto.getUsername(), autenticazione_dto.getPassword());
-	return null;
+
+	String nome = cliente.getNome_cliente();
+	String cognome = cliente.getCognome_cliente();
+	Date data_nascita = cliente.getData_nascita();
+	Pagina_profilo_DTO pagina_profilo_DTO = new Pagina_profilo_DTO();
+	pagina_profilo_DTO.setInformazioniUtenteDTO(new InformazioniUtenteDTO(nome, cognome, data_nascita));
+
+
+	return pagina_profilo_DTO;
 }
 }
