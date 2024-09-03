@@ -38,7 +38,7 @@ public class Prenotazioni_service {
 	
 		public String verifica_disponibilita(Verifica_camere_DTO verifica_camere) {
 			List<PrenotazioneCamera> camere_occupate = prenotazioneCamera_repository.verifica_disp(verifica_camere.getData_inizio(), verifica_camere.getData_fine());
-			return "";
+			return null;
 		}
 	
 	
