@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import com.example.demo.Entity_hotel.Cliente;
 import com.example.demo.clienteRepository.ClienteRepository;
 import com.example.demo.dto_hotel.Autenticazione_dto;
+import com.example.demo.dto_hotel.Registrazione_dto;
 
 @Service
 
@@ -28,5 +29,10 @@ public String registrazione(Autenticazione_dto autenticazione_dto) {
 	}
 return "";	
 
+}
+public String autenticazione(Registrazione_dto registrazione_dto) {
+	// TODO Auto-generated method stub
+	Cliente cliente = clienteRepository.findByUsernameAndPassword(registrazione_dto.getUsername(), registrazione_dto.getPassword());
+	return null;
 }
 }
