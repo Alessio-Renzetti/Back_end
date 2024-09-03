@@ -11,7 +11,7 @@ import com.example.demo.Entity_hotel.Camera;
 import com.example.demo.Entity_hotel.PrenotazioneCamera;
 
 @Repository
-public interface PrenotazioneCamera_repository extends JpaRepository <PrenotazioneCamera ,Camera> {
+public interface PrenotazioneCamera_repository extends JpaRepository <PrenotazioneCamera ,Long> {
 //	@Query (value = "select pc.FK_camera "
 //			+ "from Prenotazione p "
 //			+ "left join PrenotazioneCamera pc on p.id_prenotazione = pc.FK_prenotazione "
@@ -19,7 +19,7 @@ public interface PrenotazioneCamera_repository extends JpaRepository <Prenotazio
 
 	@Query (value = "select pc "
 			+ "from PrenotazioneCamera pc "
-			+ "where (:data_inizio<=pc.Prenotazione.data_inizio and :data_fine>=pc.Prenotazione.data_fine) or (:data_inizio>=pc.Prenotazione.data_inizio and :data_fine<=pc.Prenotazione.data_fine)")
+			+ "where (:data_inizio<=pc.prenotazione.data_inizio and :data_fine>=pc.prenotazione.data_fine) or (:data_inizio>=pc.prenotazione.data_inizio and :data_fine<=pc.prenotazione.data_fine)")
 	public List<PrenotazioneCamera> verifica_disp(Date data_inizio, Date data_fine);
 
 }
