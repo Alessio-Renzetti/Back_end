@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.example.demo.Entity_hotel.Cliente;
-import com.example.demo.clienteRepository.ClienteRepository;
+import com.example.demo.Repository.ClienteRepository;
 import com.example.demo.dto_hotel.Autenticazione_dto;
 import com.example.demo.dto_hotel.Registrazione_dto;
 
@@ -21,13 +21,13 @@ public String registrazione(Autenticazione_dto autenticazione_dto) {
 		utente_da_registrare = new Cliente(autenticazione_dto.getUsername(), autenticazione_dto.getNome(),autenticazione_dto.getCognome(),
 				autenticazione_dto.getData_di_nascita(),autenticazione_dto.getPassword() );
 		clienteRepository.save(utente_da_registrare);
+		return "Registrazione avvenuta";
 	}
 	else {
-		
-		//"Username già in uso "
-		
+
+		return "Username già in uso";
+
 	}
-return "";	
 
 }
 public String autenticazione(Registrazione_dto registrazione_dto) {

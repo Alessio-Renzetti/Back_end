@@ -6,21 +6,24 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name="cliente")
+@Table(name="prenotazione")
 public class Prenotazione {
 
  
 	
 	 	@Id
 	    @GeneratedValue(strategy = GenerationType.IDENTITY)
-	    @Column(name="	id_prenotazione")
-	    private Long 	id_prenotazione;
+	    @Column(name="id_prenotazione", nullable = false, unique = true)
+	    private Long id_prenotazione;
 
-	    @Column(name="	FK_cliente ")
-	    private String 	FK_cliente ;
+	    @ManyToOne
+	    @JoinColumn(name="FK_cliente")
+	    private Cliente cliente ;
 
 	    @Column(name="data_inizio")
 	    private String data_inizio;
@@ -30,11 +33,8 @@ public class Prenotazione {
 	    
 	    @Column(name="	pagato")
 	    private Integer pagato;
-	    
-	    @Column(name="password_CL")
-	    private Integer password_CL;
 
-	    // Costruttori, getter e setter
+	// Costruttori, getter e setter
 
 	    public Prenotazione() {
 	    	
@@ -44,8 +44,8 @@ public class Prenotazione {
 			return id_prenotazione;
 		}
 
-		public String getFK_cliente() {
-			return FK_cliente;
+		public Cliente getFK_cliente() {
+			return cliente;
 		}
 
 		public String getData_inizio() {
@@ -60,16 +60,12 @@ public class Prenotazione {
 			return pagato;
 		}
 
-		public Integer getPassword_CL() {
-			return password_CL;
-		}
-
-		public void setId_prenotazione(Long id_prenotazione) {
+	public void setId_prenotazione(Long id_prenotazione) {
 			this.id_prenotazione = id_prenotazione;
 		}
 
-		public void setFK_cliente(String fK_cliente) {
-			FK_cliente = fK_cliente;
+		public void setFK_cliente(Cliente fK_cliente) {
+			cliente = fK_cliente;
 		}
 
 		public void setData_inizio(String data_inizio) {
@@ -82,10 +78,6 @@ public class Prenotazione {
 
 		public void setPagato(Integer pagato) {
 			this.pagato = pagato;
-		}
-
-		public void setPassword_CL(Integer password_CL) {
-			this.password_CL = password_CL;
 		}
 
 }
