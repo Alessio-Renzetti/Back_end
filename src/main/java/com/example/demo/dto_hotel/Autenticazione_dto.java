@@ -3,7 +3,6 @@ package com.example.demo.dto_hotel;
 //import java.util.String;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-
 import java.util.Date;
 
 public class Autenticazione_dto {

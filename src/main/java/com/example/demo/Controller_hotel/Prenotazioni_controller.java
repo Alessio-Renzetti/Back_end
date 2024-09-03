@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.example.demo.Entity_hotel.Prenotazione;
 import com.example.demo.Service_hotel.Prenotazioni_service;
 import com.example.demo.dto_hotel.CredenzialiUtente;
+import com.example.demo.dto_hotel.Verifica_camere_DTO;
 
 
 @Controller
@@ -18,6 +19,12 @@ public class Prenotazioni_controller {
 	@Autowired
 	private Prenotazioni_service prenotazioniservice;
 	
+	@CrossOrigin(origins="*")
+	@ResponseBody
+	@RequestMapping(value="verifica")
+	public String disponibilita_stanza(@RequestBody Verifica_camere_DTO verifica_camere) {
+		return "";
+	}
 	
 	@CrossOrigin(origins="*")
 	@ResponseBody
