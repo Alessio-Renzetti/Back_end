@@ -1,6 +1,6 @@
 package com.example.demo.dto_hotel;
 
-import java.util.Date;
+import java.sql.Date;
 
 public class InformazioniUtenteDTO {
     private String nome;

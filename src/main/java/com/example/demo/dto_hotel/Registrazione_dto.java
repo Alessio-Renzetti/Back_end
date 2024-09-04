@@ -4,7 +4,7 @@ package com.example.demo.dto_hotel;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 
-import java.util.Date;
+import java.sql.Date;
 
 public class Registrazione_dto {
 	private String username;
