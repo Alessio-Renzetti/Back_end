@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import com.example.demo.Entity_hotel.Prenotazione;
 import com.example.demo.Service_hotel.Prenotazioni_service;
-import com.example.demo.dto_hotel.CredenzialiUtente;
+//import com.example.demo.dto_hotel.CredenzialiUtente;
 import com.example.demo.dto_hotel.Verifica_camere_DTO;
 
 
@@ -26,12 +26,12 @@ public class Prenotazioni_controller {
 		return "";
 	}
 	
-	@CrossOrigin(origins="*")
-	@ResponseBody
-	@RequestMapping(value="lista")
-	public String visualizza_lista(@RequestBody CredenzialiUtente credenzialiUtente) {
-		return prenotazioniservice.visualizza_lista(credenzialiUtente);
-	}
+//	@CrossOrigin(origins="*")
+//	@ResponseBody
+//	@RequestMapping(value="lista")
+//	public String visualizza_lista(@RequestBody CredenzialiUtente credenzialiUtente) {
+//		return prenotazioniservice.visualizza_lista(credenzialiUtente);
+//	}
 	
 
 	@CrossOrigin(origins="*")
