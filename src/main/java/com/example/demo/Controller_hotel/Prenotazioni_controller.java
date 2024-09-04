@@ -1,5 +1,6 @@
 package com.example.demo.Controller_hotel;
 
+import com.example.demo.Entity_hotel.Camera;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -10,6 +11,8 @@ import com.example.demo.Entity_hotel.Prenotazione;
 import com.example.demo.Service_hotel.Prenotazioni_service;
 //import com.example.demo.dto_hotel.CredenzialiUtente;
 import com.example.demo.dto_hotel.Verifica_camere_DTO;
+
+import java.util.List;
 
 
 @Controller
@@ -22,8 +25,8 @@ public class Prenotazioni_controller {
 	@CrossOrigin(origins="*")
 	@ResponseBody
 	@RequestMapping(value="verifica")
-	public String disponibilita_stanza(@RequestBody Verifica_camere_DTO verifica_camere) {
-		return "";
+	public List<Camera> disponibilita_stanza(@RequestBody Verifica_camere_DTO verifica_camere){
+		return prenotazioniservice.verifica_disponibilita(verifica_camere);
 	}
 	
 //	@CrossOrigin(origins="*")
