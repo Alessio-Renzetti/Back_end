@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 import com.example.demo.Entity_hotel.Cliente;
 import com.example.demo.Repository.ClienteRepository;
 
-import java.util.Date;
+import java.sql.Date;
 
 @Service
 
