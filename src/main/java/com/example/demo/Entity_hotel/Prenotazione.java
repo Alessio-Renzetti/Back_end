@@ -10,6 +10,8 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
+import java.sql.Date;
+
 @Entity
 @Table(name="prenotazione")
 public class Prenotazione {
@@ -26,58 +28,61 @@ public class Prenotazione {
 	    private Cliente cliente ;
 
 	    @Column(name="data_inizio")
-	    private String data_inizio;
-	    
+	    private Date data_inizio;
+
 	    @Column(name="data_fine")
-	    private Integer data_fine;
+	    private Date data_fine;
 	    
 	    @Column(name="	pagato")
 	    private Integer pagato;
 
 	// Costruttori, getter e setter
 
-	    public Prenotazione() {
-	    	
-	    }
 
-		public Long getId_prenotazione() {
-			return id_prenotazione;
-		}
+	public Prenotazione(Cliente cliente, Date data_inizio, Date data_fine, Integer pagato) {
+		this.cliente = cliente;
+		this.data_inizio = data_inizio;
+		this.data_fine = data_fine;
+		this.pagato = pagato;
+	}
 
-		public Cliente getFK_cliente() {
-			return cliente;
-		}
-
-		public String getData_inizio() {
-			return data_inizio;
-		}
-
-		public Integer getData_fine() {
-			return data_fine;
-		}
-
-		public Integer getPagato() {
-			return pagato;
-		}
+	public Long getId_prenotazione() {
+		return id_prenotazione;
+	}
 
 	public void setId_prenotazione(Long id_prenotazione) {
-			this.id_prenotazione = id_prenotazione;
-		}
+		this.id_prenotazione = id_prenotazione;
+	}
 
-		public void setFK_cliente(Cliente fK_cliente) {
-			cliente = fK_cliente;
-		}
+	public Cliente getCliente() {
+		return cliente;
+	}
 
-		public void setData_inizio(String data_inizio) {
-			this.data_inizio = data_inizio;
-		}
+	public void setCliente(Cliente cliente) {
+		this.cliente = cliente;
+	}
 
-		public void setData_fine(Integer data_fine) {
-			this.data_fine = data_fine;
-		}
+	public Date getData_inizio() {
+		return data_inizio;
+	}
 
-		public void setPagato(Integer pagato) {
-			this.pagato = pagato;
-		}
+	public void setData_inizio(Date data_inizio) {
+		this.data_inizio = data_inizio;
+	}
 
+	public Date getData_fine() {
+		return data_fine;
+	}
+
+	public void setData_fine(Date data_fine) {
+		this.data_fine = data_fine;
+	}
+
+	public Integer getPagato() {
+		return pagato;
+	}
+
+	public void setPagato(Integer pagato) {
+		this.pagato = pagato;
+	}
 }

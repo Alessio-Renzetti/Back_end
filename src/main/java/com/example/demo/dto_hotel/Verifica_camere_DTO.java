@@ -1,7 +1,9 @@
 package com.example.demo.dto_hotel;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import java.util.Date;
+
+import java.sql.Date;
+//import java.util.Date;
 
 public class Verifica_camere_DTO {
 	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")

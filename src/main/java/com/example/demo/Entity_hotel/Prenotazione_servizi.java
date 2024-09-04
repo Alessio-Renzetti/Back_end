@@ -12,7 +12,7 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name="prenotazione_servizi")
+@Table(name="prenotazione_servizio")
 public class Prenotazione_servizi {
 	@Id
 	@GeneratedValue(strategy= GenerationType.IDENTITY)
@@ -26,7 +26,7 @@ public class Prenotazione_servizi {
 	private Integer n_persone;
 	
 	@ManyToOne
-    @JoinColumn(name = "FK_servizi")
+    @JoinColumn(name = "FK_servizio")
     private Servizi servizi;
 
 	@ManyToOne
