@@ -21,8 +21,8 @@ public class Camera {
 	@Column(name="n_max_posti")
 	private Integer n_max_posti;
 	
-	@Column(name="prezzi_tipo_camera")
-	private Integer prezzi_tipo_camera;
+	@Column(name="prezzo_tipo_camera")
+	private Integer prezzo_tipo_camera;
 
 	public Integer getId() {
 		return id;
@@ -49,10 +49,10 @@ public class Camera {
 	}
 
 	public Integer getPrezzi_tipo_camera() {
-		return prezzi_tipo_camera;
+		return prezzo_tipo_camera;
 	}
 
 	public void setPrezzi_tipo_camera(Integer prezzi_tipo_camera) {
-		this.prezzi_tipo_camera = prezzi_tipo_camera;
+		this.prezzo_tipo_camera = prezzo_tipo_camera;
 	}
 }
