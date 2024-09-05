@@ -46,7 +46,7 @@ public Pagina_profilo_DTO autenticazione(Autenticazione_dto autenticazione_dto) 
 		Long id =prenotazione.get(i).getId_prenotazione();
 		List<PrenotazioneCamera> prenotazioneCamera = prenotazioneCameraRepository.camere_cliente(id);
 		for (int j=0; j<prenotazioneCamera.size();j++) {
-			prenotazioniCliente.add(new Prenotazioni_cliente_DTO(prenotazioneCamera.get(j).getPrenotazione().getData_inizio(), prenotazioneCamera.get(j).getPrenotazione().getData_fine(), prenotazioneCamera.get(j).getCamera().getId(),prenotazioneCamera.get(j).getCamera().getPrezzi_tipo_camera())) ;
+			prenotazioniCliente.add(new Prenotazioni_cliente_DTO(prenotazioneCamera.get(j).getPrenotazione().getData_inizio(), prenotazioneCamera.get(j).getPrenotazione().getData_fine(), prenotazioneCamera.get(j).getCamera().getNome_camera(),prenotazioneCamera.get(j).getCamera().getPrezzi_tipo_camera())) ;
 		}
 	}
 	String nome = cliente.getNome_cliente();

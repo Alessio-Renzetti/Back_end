@@ -5,7 +5,7 @@ import java.sql.Date;
 public class Prenotazioni_cliente_DTO {
     private Date data_inizio;
     private Date data_fine;
-    private Integer n_camera;
+    private String n_camera;
     private Integer prezzo;
 
     public Date getData_inizio() {
@@ -24,11 +24,11 @@ public class Prenotazioni_cliente_DTO {
         this.data_fine = data_fine;
     }
 
-    public Integer getN_camera() {
+    public String getN_camera() {
         return n_camera;
     }
 
-    public void setN_camera(Integer n_camera) {
+    public void setN_camera(String n_camera) {
         this.n_camera = n_camera;
     }
 
@@ -39,7 +39,7 @@ public class Prenotazioni_cliente_DTO {
     public void setPrezzo(Integer prezzo) {
         this.prezzo = prezzo;
     }
-    public Prenotazioni_cliente_DTO(Date data_inizio, Date data_fine, Integer n_camera, Integer prezzo) {
+    public Prenotazioni_cliente_DTO(Date data_inizio, Date data_fine, String n_camera, Integer prezzo) {
         this.data_inizio = data_inizio ;
         this.data_fine = data_fine;
         this.n_camera = n_camera;
