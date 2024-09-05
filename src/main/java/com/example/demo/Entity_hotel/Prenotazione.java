@@ -39,6 +39,9 @@ public class Prenotazione {
 	// Costruttori, getter e setter
 
 
+	public Prenotazione() {
+	}
+
 	public Prenotazione(Cliente cliente, Date data_inizio, Date data_fine, Integer pagato) {
 		this.cliente = cliente;
 		this.data_inizio = data_inizio;

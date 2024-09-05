@@ -21,6 +21,9 @@ public class PrenotazioneCamera {
     @Column(name = "n_ospiti")
     private Integer n_ospiti;
 
+    public PrenotazioneCamera() {
+    }
+
     public Integer getIdPrenotazioneCamera() {
         return idPrenotazioneCamera;
     }
