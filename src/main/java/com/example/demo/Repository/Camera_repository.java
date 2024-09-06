@@ -11,5 +11,7 @@ import com.example.demo.Entity_hotel.Camera;
 @Repository
 public interface Camera_repository extends JpaRepository<Camera, Long>{
 
+	@Query(value = "select c from Camera c where id = :id_camera ")
+	public List<Camera> trova_camera_per_id(Long id_camera);
 
 }

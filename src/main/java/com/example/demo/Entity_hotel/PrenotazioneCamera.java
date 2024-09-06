@@ -19,7 +19,7 @@ public class PrenotazioneCamera {
     private Prenotazione prenotazione;
 
     @Column(name = "n_ospiti")
-    private Integer n_ospiti;
+    private Long n_ospiti;
 
     public PrenotazioneCamera() {
     }
@@ -48,11 +48,11 @@ public class PrenotazioneCamera {
         this.prenotazione = prenotazione;
     }
 
-    public Integer getN_ospiti() {
+    public Long getN_ospiti() {
         return n_ospiti;
     }
 
-    public void setN_ospiti(Integer n_ospiti) {
+    public void setN_ospiti(Long n_ospiti) {
         this.n_ospiti = n_ospiti;
     }
 }
