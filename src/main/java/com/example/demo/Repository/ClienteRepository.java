@@ -14,4 +14,5 @@ public interface ClienteRepository extends JpaRepository<Cliente, Long> {
 	
 	@Query(value="SELECT cl FROM Cliente cl where username_CL = :username AND password_CL = :password")
 	public Cliente findByUsernameAndPassword(String username, String password);
+
 }
