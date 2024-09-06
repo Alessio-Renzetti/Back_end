@@ -23,8 +23,8 @@ public interface PrenotazioneCamera_repository extends JpaRepository <Prenotazio
 			+ "or (:data_inizio>=pc.prenotazione.data_inizio and :data_fine<=pc.prenotazione.data_fine)")
 	public List<PrenotazioneCamera> verifica_disp(Date data_inizio, Date data_fine);
 
-	@Query(value = "select pc"
-			+ "form PrenotazioneCamera pc"
+	@Query(value = "select pc "
+			+ "from PrenotazioneCamera pc "
 			+ "where pc.prenotazione.id_prenotazione=:id"
 	)
 	public List<PrenotazioneCamera> camere_cliente(Long id);
